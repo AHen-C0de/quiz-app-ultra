@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--color-sticky);
+  margin: 0;
+  padding: 0.5rem;
+  color: var(--color-background);
+  font-family: "Patrick Hand";
+}

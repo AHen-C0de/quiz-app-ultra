@@ -1,0 +1,16 @@
+.navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 10px 0 10px 0;
+  background-color: var(--color-sticky);
+}
+
+.navbar li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
