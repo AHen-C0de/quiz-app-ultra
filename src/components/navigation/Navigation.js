@@ -1,14 +1,16 @@
 import "./Navigation.css";
 
-function Navigation() {
+function Navigation({ currPage, changePage }) {
   return (
     <footer>
       <nav>
         <ul className="navbar">
           <li>
-            <a href="/#">
+            <a href="/#" onClick={() => changePage("home")}>
               <svg
-                className="navbar__icon current"
+                className={`navbar__icon ${
+                  currPage === "home" ? "navbar__current" : ""
+                }`}
                 alt="home-icon"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -20,9 +22,11 @@ function Navigation() {
             </a>
           </li>
           <li>
-            <a href="/#">
+            <a href="/#" onClick={() => changePage("bookmarks")}>
               <svg
-                className="navbar__icon"
+                className={`navbar__icon ${
+                  currPage === "bookmarks" ? "navbar__current" : ""
+                }`}
                 alt="bookmarks-icon"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -34,9 +38,11 @@ function Navigation() {
             </a>
           </li>
           <li>
-            <a href="/#">
+            <a href="/#" onClick={() => changePage("add")}>
               <svg
-                className="navbar__icon"
+                className={`navbar__icon ${
+                  currPage === "add" ? "navbar__current" : ""
+                }`}
                 alt="add-icon"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -48,9 +54,11 @@ function Navigation() {
             </a>
           </li>
           <li>
-            <a href="/#">
+            <a href="/#" onClick={() => changePage("profile")}>
               <svg
-                className="navbar__icon"
+                className={`navbar__icon ${
+                  currPage === "profile" ? "navbar__current" : ""
+                }`}
                 alt="profile-icon"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

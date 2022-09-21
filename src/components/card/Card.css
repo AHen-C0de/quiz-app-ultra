@@ -41,6 +41,8 @@
   background-color: var(--color-background);
   border-radius: 0.5rem;
   font-size: 1.3rem;
+  border: none;
+  box-shadow: 5px 5px 10px var(--color-card-shaddow);
 }
 
 .card__answer {

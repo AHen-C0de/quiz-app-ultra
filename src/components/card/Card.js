@@ -1,8 +1,11 @@
+import { useState } from "react";
 import "./Card.css";
 
 function Card({ question, answer, tags }) {
+  const [showAnswer, setShowAnswer] = useState(false);
+
   return (
-    <div className="card">
+    <li className="card">
       <button className="card__bookmark-icon">
         <svg
           alt="bookmark-icon"
@@ -16,14 +19,23 @@ function Card({ question, answer, tags }) {
         </svg>
       </button>
       <p className="card__question">{question}</p>
-      <button className="card__answer-button">Show Answer</button>
-      <p className="card__answer">{answer}</p>
+      <button
+        onClick={() =>
+          setShowAnswer((previousShowAnswer) => !previousShowAnswer)
+        }
+        className="card__answer-button"
+      >
+        {showAnswer ? "Hide Answer" : "Show Answer"}
+      </button>
+      {showAnswer && <p className="card__answer">{answer}</p>}
       <ul className="card__tags-list">
         {tags.map((tag) => (
-          <li className="card__tag">{tag}</li>
+          <li key={tag} className="card__tag">
+            {tag}
+          </li>
         ))}
       </ul>
-    </div>
+    </li>
   );
 }
 
