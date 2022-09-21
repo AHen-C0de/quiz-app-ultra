@@ -1,6 +1,6 @@
 import "./Card.css";
 
-function Card() {
+function Card({ question, answer, tags }) {
   return (
     <div className="card">
       <button className="card__bookmark-icon">
@@ -15,13 +15,13 @@ function Card() {
           <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z" />
         </svg>
       </button>
-      <p className="card__question">Question</p>
+      <p className="card__question">{question}</p>
       <button className="card__answer-button">Show Answer</button>
-      <p className="card__answer">Some Answer Text</p>
+      <p className="card__answer">{answer}</p>
       <ul className="card__tags-list">
-        <li className="card__tag">#HTML</li>
-        <li className="card__tag">#CSS</li>
-        <li className="card__tag">#JavaScript</li>
+        {tags.map((tag) => (
+          <li className="card__tag">{tag}</li>
+        ))}
       </ul>
     </div>
   );

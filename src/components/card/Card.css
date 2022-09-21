@@ -73,3 +73,7 @@
   list-style: none;
   font-family: "Lucida Console", "Courier New", monospace;
 }
+
+.header__main--homePage {
+  font-size: 2.7rem;
+}

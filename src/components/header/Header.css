@@ -3,10 +3,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   background-color: var(--color-sticky);
-  margin: 0;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   color: var(--color-background);
   font-family: "Patrick Hand";
+  z-index: 10;
+}
+
+.header__main--homePage {
+  font-size: 1rem;
 }
