@@ -20,3 +20,10 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+
+@media (min-width: 1024px) {
+  .content-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
