@@ -36,9 +36,9 @@ const cards = [
   },
   {
     id: 6,
-    question: "sdfjiodsjfiodsfjpoaejteirjtoperjtopijrtejtpwt?",
+    question: "sdfjiods jfiodsfjpoaejte irjtoperjtopijrtejt pwt?",
     answer:
-      "dfhefjerotjerijteirjteirjterjgjnefruthe45htiehrfngödsnfgptehprhtierhg",
+      "dfhefjerot jerijteir jteirjterjgjnef ruthe45htiehr fngödsnfgp tehprhtierhg",
     tags: ["next JS", "js", "tag", "taaaag", "tag"],
     bookmarked: true,
   },
