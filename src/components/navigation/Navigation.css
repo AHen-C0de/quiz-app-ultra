@@ -13,16 +13,3 @@
   flex-direction: column;
   justify-content: flex-end;
 }
-
-.navbar a {
-  height: 2.5rem;
-}
-
-.navbar__icon {
-  height: 100%;
-  fill: var(--color-background);
-}
-
-.navbar__current {
-  border-bottom: solid 3px var(--color-card);
-}
