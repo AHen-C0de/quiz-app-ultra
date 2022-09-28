@@ -18,14 +18,14 @@ const cards = [
     question: "Question 3",
     answer: "Answer 3",
     tags: ["next JS", "js"],
-    bookmarked: true,
+    bookmarked: false,
   },
   {
     id: 4,
     question: "Question 4",
     answer: "Answer 4",
     tags: ["next JS", "js"],
-    bookmarked: true,
+    bookmarked: false,
   },
   {
     id: 5,
