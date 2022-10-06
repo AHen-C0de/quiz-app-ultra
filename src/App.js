@@ -1,36 +1,30 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-
-import "./App.css";
+import styled from "styled-components";
 
 import Header from "./components/header/Header";
 import Navigation from "./components/navigation/Navigation";
-import HomePage from "./pages/HomePage.jsx";
+import CardsPage from "./pages/CardsPage.jsx";
 import ProfilePage from "./pages/ProfilePage.jsx";
 import AddPage from "./pages/AddPage.jsx";
-import BookmarkPage from "./pages/BookmarkPage";
-import { cards } from "./db.js";
+import { cardsDB } from "./db.js";
 
 function App() {
-  const [currentPage, setCurrPage] = useState("home");
+  const [cards, setCards] = useState(cardsDB);
+  console.log(cards);
 
-  function changePage(page) {
-    if (currentPage === page) {
-      return;
-    }
-    setCurrPage(page);
-  }
+  function deleteCard(id) {}
 
   return (
-    <div className="app">
+    <AppContainer>
       <Header />
-      <main className="app__main">
+      <AppMain>
         <Routes>
-          <Route path="/" element={<HomePage cards={cards} />} />
+          <Route path="/" element={<CardsPage cards={cards} />} />
           <Route
             path="/bookmarks"
             element={
-              <BookmarkPage
+              <CardsPage
                 cards={cards.filter((card) => card.bookmarked)} // show only bookmarked cards on that page
               />
             }
@@ -38,10 +32,22 @@ function App() {
           <Route path="/add" element={<AddPage />} />
           <Route path="/profile" element={<ProfilePage />} />
         </Routes>
-      </main>
+      </AppMain>
       <Navigation />
-    </div>
+    </AppContainer>
   );
 }
 
 export default App;
+
+const AppContainer = styled.div`
+  text-align: center;
+  background-color: var(--color-background);
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  height: 100vh;
+`;
+
+const AppMain = styled.main`
+  overflow-y: auto;
+`;

@@ -1,4 +1,4 @@
-const cards = [
+const cardsDB = [
   {
     id: 1,
     question: "Question 1",
@@ -44,4 +44,4 @@ const cards = [
   },
 ];
 
-export { cards };
+export { cardsDB };
